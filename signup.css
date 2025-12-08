@@ -1,0 +1,363 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+ }
+
+ :root {
+     --primary-color: #000000;
+     --secondary-color: #ffffff;
+     --accent-color: #007bff;
+     --accent-hover: #0056b3;
+     --card-bg: #111111;
+     --input-bg: #1a1a1a;
+     --text-secondary: #888888;
+     --border-color: #333333;
+ }
+
+ body {
+     background-color: #fafafa;
+     color: var(--secondary-color);
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     background-image: radial-gradient(circle at 20% 80%, rgba(40, 40, 40, 0.3) 0%, transparent 20%),
+         radial-gradient(circle at 80% 20%, rgba(40, 40, 40, 0.3) 0%, transparent 20%);
+ }
+
+ .container {
+     display: flex;
+     max-width: 1200px;
+     width: 100%;
+     min-height: 700px;
+     border-radius: 16px;
+     overflow: hidden;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+ }
+
+ .brand-section {
+     flex: 1;
+     background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+     padding: 50px 40px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .brand-section::before {
+     content: '';
+     position: absolute;
+     top: -50%;
+     right: -30%;
+     width: 300px;
+     height: 300px;
+     background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
+     border-radius: 50%;
+ }
+
+ .brand-section::after {
+     content: '';
+     position: absolute;
+     bottom: -30%;
+     left: -20%;
+     width: 250px;
+     height: 250px;
+     background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+     border-radius: 50%;
+ }
+
+ .logo {
+     font-size: 32px;
+     font-weight: 800;
+     letter-spacing: 1px;
+     margin-bottom: 10px;
+     position: relative;
+     z-index: 2;
+ }
+
+ .logo span {
+background: linear-gradient(195deg, #FFFFFF 0%, #D4AF37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     
+ }
+
+ .tagline {
+     font-size: 14px;
+     letter-spacing: 3px;
+     text-transform: uppercase;
+     color: var(--text-secondary);
+     margin-bottom: 40px;
+     position: relative;
+     z-index: 2;
+ }
+
+ .brand-content {
+     position: relative;
+     z-index: 2;
+ }
+
+ .brand-content h1 {
+     font-size: 42px;
+     font-weight: 700;
+     line-height: 1.2;
+     margin-bottom: 30px;
+     background: linear-gradient(to right, #fff 0%, #aaa 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+
+ .features {
+     list-style: none;
+     margin-top: 40px;
+ }
+
+ .features li {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+     font-size: 16px;
+     color: var(--text-secondary);
+ }
+
+ .features i {
+     color: var();
+     margin-right: 15px;
+     font-size: 18px;
+ }
+
+ .copyright {
+     font-size: 12px;
+     color: var(--text-secondary);
+     position: relative;
+     z-index: 2;
+ }
+
+ .signup-section {
+     flex: 1;
+     background-color: white;
+     padding: 60px 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .signup-header {
+     margin-bottom: 40px;
+ }
+
+ .signup-header h2 {
+     font-size: 32px;
+     color: var(--primary-color);
+     font-weight: 700;
+     margin-bottom: 10px;
+ }
+
+ .signup-header p {
+     color: var(--text-secondary);
+     font-size: 16px;
+ }
+
+ .signup-form {
+     width: 100%;
+ }
+
+ .form-group {
+     margin-bottom: 25px;
+     position: relative;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 8px;
+     font-weight: 500;
+     font-size: 14px;
+     color: #000000;
+ }
+
+ .input-with-icon {
+     position: relative;
+ }
+
+ .input-with-icon i {
+     position: absolute;
+     left: 15px;
+     top: 50%;
+     transform: translateY(-50%);
+     color: var(--text-secondary);
+     font-size: 16px;
+ }
+
+ .input-with-icon input {
+     width: 100%;
+     padding: 15px 15px 15px 45px;
+     background-color: transparent;
+     border: 1px solid var(--border-color);
+     border-radius: 8px;
+     color: var(--secondary-color);
+     font-size: 16px;
+     transition: all 0.3s ease;
+ }
+
+ .input-with-icon input:focus {
+     outline: none;
+     border-color: var(--accent-color);
+     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+ }
+
+ .terms {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 30px;
+ }
+
+ .terms input {
+     margin-right: 10px;
+     margin-top: 3px;
+ }
+
+ .terms label {
+     font-size: 14px;
+     color: var(--text-secondary);
+     line-height: 1.5;
+ }
+
+ .terms a {
+     color: #D4AF37;
+     text-decoration: none;
+ }
+
+ .terms a:hover {
+     text-decoration: underline;
+ }
+
+ .signup-btn {
+     width: 100%;
+     padding: 16px;
+     background-color: var(--card-bg);
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     margin-bottom: 25px;
+ }
+
+ .signup-btn:hover {
+     background-color: var(--accent-hover);
+ }
+
+ .divider {
+     text-align: center;
+     margin: 25px 0;
+     position: relative;
+     color: var(--text-secondary);
+     font-size: 14px;
+ }
+
+ .divider::before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 50%;
+     width: 42%;
+     height: 1px;
+     background-color: var(--border-color);
+ }
+
+ .divider::after {
+     content: '';
+     position: absolute;
+     right: 0;
+     top: 50%;
+     width: 42%;
+     height: 1px;
+     background-color: var(--border-color);
+ }
+
+ .social-buttons {
+     display: flex;
+     gap: 15px;
+     margin-bottom: 30px;
+ }
+
+ .social-btn {
+     flex: 1;
+     padding: 14px;
+     border: 1px solid var(--border-color);
+     border-radius: 8px;
+     background-color: transparent;
+     color: var(--secondary-color);
+     font-size: 14px;
+     font-weight: 500;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.3s ease;
+ }
+
+ .social-btn i {
+     margin-right: 8px;
+     font-size: 16px;
+ }
+
+ .social-btn.google:hover {
+     background-color: rgba(219, 68, 55, 0.1);
+     border-color: #db4437;
+ }
+
+ .social-btn.apple:hover {
+     background-color: rgba(255, 255, 255, 0.1);
+     border-color: #aaa;
+ }
+
+ .login-link {
+     text-align: center;
+     font-size: 15px;
+     color: var(--text-secondary);
+ }
+
+ .login-link a {
+     color: #D4AF37;
+     text-decoration: none;
+     font-weight: 600;
+ }
+
+ .login-link a:hover {
+     text-decoration: underline;
+ }
+
+ /* Responsive design */
+ @media (max-width: 900px) {
+     .container {
+         flex-direction: column;
+         max-width: 500px;
+     }
+
+     .brand-section,
+     .signup-section {
+         padding: 40px 30px;
+     }
+
+     .brand-content h1 {
+         font-size: 32px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .social-buttons {
+         flex-direction: column;
+     }
+
+     .brand-content h1 {
+         font-size: 28px;
+     }
+ }
