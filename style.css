@@ -246,7 +246,8 @@
    }
 
    .card:hover {
-       transform: translateY(-5px);
+       transform: translateY(-15px);
+       box-shadow: 0 4px 18px rgba(0,0,0,0.5);
    }
 
    .card img {
@@ -261,7 +262,7 @@
    }
 
    .category {
-       color: #888;
+         color: #888;
        font-size: 12px;
        letter-spacing: 1px;
        margin-bottom: 8px;
@@ -778,3 +779,205 @@
        opacity: 1;
        visibility: visible;
    }
+
+          /* Newsletter Section Styling */
+  .newsletter {
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      margin-top: 80px;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .newsletter::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+          radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  }
+
+  .newsletter__container {
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+  }
+
+  /* TITLE */
+  .newsletter__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #fff 0%, #FFD700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+
+  .newsletter__subtitle {
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+  }
+
+  /* MESSAGES */
+  .newsletter__message {
+      padding: 18px 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      justify-content: center;
+      animation: slideDown 0.5s ease-out;
+  }
+
+  .newsletter__message--success {
+      background: rgba(46, 204, 113, 0.15);
+      color: #2ecc71;
+      border: 2px solid rgba(46, 204, 113, 0.3);
+  }
+
+  .newsletter__message--error {
+      background: rgba(231, 76, 60, 0.15);
+      color: #e74c3c;
+      border: 2px solid rgba(231, 76, 60, 0.3);
+  }
+
+  .newsletter__icon {
+      font-size: 20px;
+  }
+
+  /* FORM */
+  .newsletter__form {}
+
+  .newsletter__input-wrapper {
+      position: relative;
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+      transition: 0.3s ease;
+  }
+
+  .newsletter__input {
+      flex: 1;
+      padding: 20px 25px 20px 60px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+  }
+
+  .newsletter__input::placeholder {
+      color: #999;
+  }
+
+  .newsletter__input-icon {
+      position: absolute;
+      left: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ccc;
+      z-index: 2;
+  }
+
+  .newsletter__input-wrapper:focus-within {
+      border-color: #FFD700;
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+  }
+
+  /* BUTTON */
+  .newsletter__btn {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      padding: 20px 35px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .newsletter__btn:hover {
+      transform: translateX(5px);
+  }
+
+  /* LOADING */
+  .newsletter__loading {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .newsletter__spinner {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid #FFD700;
+      animation: spin 1s linear infinite;
+  }
+
+  /* BENEFITS */
+  .newsletter__benefits {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .newsletter__benefits-title {
+      font-size: 18px;
+      color: #FFD700;
+      margin-bottom: 20px;
+  }
+
+  .newsletter__benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+  }
+
+  .newsletter__benefit {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 15px;
+      border-radius: 10px;
+  }
+
+  .newsletter__benefit-icon {
+      color: #FFD700;
+  }
+
+  .newsletter__benefit-text {
+      font-size: 14px;
+      color: #ccc;
+  }
+
+  /* PRIVACY */
+  .newsletter__privacy {
+      color: #888;
+      margin-top: 30px;
+      font-size: 14px;
+  }
+
+  .newsletter__privacy-link {
+      color: #FFD700;
+      text-decoration: none;
+  }
