@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBD Streetwear - Shop</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-box">IBD</div>
+            <span>INSPIRED BY <strong>DENNIS</strong></span>
+        </div>
+
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fas fa-bars" id="navBar"></i>
+            <i class="fa-solid fa-user" onclick="window.location.href='login.html'"></i>
+
+        </div>
+    </header>
+    <!-- Products Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Collection</h1>
+            <p>Discover our curated selection of premium streetwear essentials</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="products-sidebar">
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" class="filter-link active" data-category="all">All Products</a></li>
+                            <li><a href="#" class="filter-link" data-category="basics">Basics</a></li>
+                            <li><a href="#" class="filter-link" data-category="outerwear">Outerwear</a></li>
+                            <li><a href="#" class="filter-link" data-category="bottoms">Bottoms</a></li>
+                            <li><a href="#" class="filter-link" data-category="jackets">Jackets</a></li>
+                            <li><a href="#" class="filter-link" data-category="accessories">Accessories</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="price-filter">
+                            <input type="range" min="0" max="500" value="500" class="price-slider" id="priceSlider"
+                                title="Filter products by price range">
+                            <div class="price-range">
+                                <span>$0</span>
+                                <span>$500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Size</h3>
+                        <div class="size-filters">
+                            <button class="size-filter" data-size="S">S</button>
+                            <button class="size-filter" data-size="M">M</button>
+                            <button class="size-filter" data-size="L">L</button>
+                            <button class="size-filter" data-size="XL">XL</button>
+                            <button class="size-filter" data-size="XXL">XXL</button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-block" id="clearFilters">Clear All Filters</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <div class="products-info">
+                            <p>Showing <span id="productsCount">12</span> products</p>
+                        </div>
+                        <div class="products-sort">
+                            <select id="sortSelect" title="Sort products by">
+                                <option value="featured">Featured</option>
+                                <option value="newest">Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name: A to Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be loaded here dynamically -->
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn disabled"><i class="fas fa-chevron-left"></i> Previous</button>
+                        <div class="pagination-numbers">
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <button class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand">
+                <div class="logo">
+                    <div class="logo-box">IBD</div>
+                    <div class="logo-text">
+                        <p class="small">INSPIRED BY</p>
+                        <p class="brand-name">DENNIS</p>
+                    </div>
+                </div>
+                <p class="brand-desc">Redefining street culture through contemporary design and authentic style.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Basics</a></li>
+                    <li><a href="#">Outerwear</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section connect">
+                <h4>CONNECT</h4>
+                <p>Follow us on social media for the latest updates and style inspiration.</p>
+                <div class="social-icons">
+                    <a href="#" title="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="Follow us on Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" title="Follow us on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="Email us"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+            <p>© 2025 Inspired by Dennis. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Sample product data
+        const products = [
+            {
+                id: 1,
+                name: "Essential White Tee",
+                category: "basics",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Premium organic cotton with perfect relaxed fit",
+                sizes: ["S", "M", "L", "XL"],
+                featured: true
+            },
+            {
+                id: 2,
+                name: "Black Signature Hoodie",
+                category: "outerwear",
+                price: 95.00,
+                image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Heavyweight French terry with custom ribbing",
+                sizes: ["M", "L", "XL", "XXL"],
+                featured: true
+            },
+            {
+                id: 3,
+                name: "Vintage Denim Trouser",
+                category: "bottoms",
+                price: 126.00,
+                image: "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Premium selvedge denim with authentic vintage wash",
+                sizes: ["S", "M", "L"],
+                featured: true
+            },
+            {
+                id: 4,
+                name: "Vintage Denim Jacket",
+                category: "jackets",
+                price: 145.00,
+                image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Classic trucker jacket with custom distressing",
+                sizes: ["M", "L", "XL"],
+                featured: true
+            },
+            {
+                id: 5,
+                name: "Essential Black Tee",
+                category: "basics",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Premium organic cotton in classic black",
+                sizes: ["S", "M", "L", "XL", "XXL"],
+                featured: false
+            },
+            {
+                id: 6,
+                name: "Grey Oversized Hoodie",
+                category: "outerwear",
+                price: 105.00,
+                image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Oversized fit with drop shoulders",
+                sizes: ["S", "M", "L"],
+                featured: false
+            },
+            {
+                id: 7,
+                name: "Cargo Pants",
+                category: "bottoms",
+                price: 110.00,
+                image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Utility cargos with multiple pockets",
+                sizes: ["S", "M", "L", "XL"],
+                featured: false
+            },
+            {
+                id: 8,
+                name: "Leather Biker Jacket",
+                category: "jackets",
+                price: 295.00,
+                image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Genuine leather with metal hardware",
+                sizes: ["M", "L", "XL"],
+                featured: true
+            },
+            {
+                id: 9,
+                name: "IBD Logo Cap",
+                category: "accessories",
+                price: 35.00,
+                image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Structured cap with embroidered logo",
+                sizes: ["One Size"],
+                featured: false
+            },
+            {
+                id: 10,
+                name: "Crossbody Bag",
+                category: "accessories",
+                price: 65.00,
+                image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Water-resistant nylon crossbody",
+                sizes: ["One Size"],
+                featured: false
+            },
+            {
+                id: 11,
+                name: "Striped Long Sleeve",
+                category: "basics",
+                price: 55.00,
+                image: "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Breathable cotton with striped pattern",
+                sizes: ["S", "M", "L"],
+                featured: false
+            },
+            {
+                id: 12,
+                name: "Track Pants",
+                category: "bottoms",
+                price: 85.00,
+                image: "https://images.unsplash.com/photo-1600688640154-9619e002df30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+                description: "Jogger-style track pants with ribbed cuffs",
+                sizes: ["S", "M", "L", "XL"],
+                featured: false
+            }
+        ];
+
+        // DOM Elements
+        const productsGrid = document.getElementById('productsGrid');
+        const productsCount = document.getElementById('productsCount');
+        const filterLinks = document.querySelectorAll('.filter-link');
+        const sizeFilters = document.querySelectorAll('.size-filter');
+        const priceSlider = document.getElementById('priceSlider');
+        const sortSelect = document.getElementById('sortSelect');
+        const clearFiltersBtn = document.getElementById('clearFilters');
+
+        let currentCategory = 'all';
+        let currentSize = null;
+        let maxPrice = 500;
+        let sortBy = 'featured';
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount();
+            renderProducts();
+
+            // Mobile menu toggle
+            document.getElementById('navToggle').addEventListener('click', function () {
+                document.getElementById('navLinks').classList.toggle('active');
+            });
+        });
+
+        // Filter by category
+        filterLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                filterLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+
+                currentCategory = this.dataset.category;
+                renderProducts();
+            });
+        });
+
+        // Filter by size
+        sizeFilters.forEach(button => {
+            button.addEventListener('click', function () {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                    currentSize = null;
+                } else {
+                    sizeFilters.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentSize = this.dataset.size;
+                }
+                renderProducts();
+            });
+        });
+
+        // Filter by price
+        priceSlider.addEventListener('input', function () {
+            maxPrice = parseInt(this.value);
+            renderProducts();
+        });
+
+        // Sort products
+        sortSelect.addEventListener('change', function () {
+            sortBy = this.value;
+            renderProducts();
+        });
+
+        // Clear all filters
+        clearFiltersBtn.addEventListener('click', function () {
+            filterLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+
+            sizeFilters.forEach(b => b.classList.remove('active'));
+
+            priceSlider.value = 500;
+            maxPrice = 500;
+
+            sortSelect.value = 'featured';
+            sortBy = 'featured';
+
+            currentCategory = 'all';
+            currentSize = null;
+
+            renderProducts();
+        });
+
+        // Render products function
+        function renderProducts() {
+            let filteredProducts = [...products];
+
+            // Filter by category
+            if (currentCategory !== 'all') {
+                filteredProducts = filteredProducts.filter(product =>
+                    product.category === currentCategory
+                );
+            }
+
+            // Filter by price
+            filteredProducts = filteredProducts.filter(product =>
+                product.price <= maxPrice
+            );
+
+            // Filter by size (if applicable)
+            if (currentSize) {
+                filteredProducts = filteredProducts.filter(product =>
+                    product.sizes.includes(currentSize)
+                );
+            }
+
+            // Sort products
+            filteredProducts.sort((a, b) => {
+                switch (sortBy) {
+                    case 'price-low':
+                        return a.price - b.price;
+                    case 'price-high':
+                        return b.price - a.price;
+                    case 'name':
+                        return a.name.localeCompare(b.name);
+                    case 'newest':
+                        return b.id - a.id;
+                    default: // featured
+                        return a.featured === b.featured ? 0 : a.featured ? -1 : 1;
+                }
+            });
+
+            // Update product count
+            productsCount.textContent = filteredProducts.length;
+
+            // Render products
+            productsGrid.innerHTML = '';
+
+            if (filteredProducts.length === 0) {
+                productsGrid.innerHTML = `
+                    <div class="no-products">
+                        <i class="fas fa-search"></i>
+                        <h3>No products found</h3>
+                        <p>Try adjusting your filters</p>
+                        <button class="btn btn-outline" id="resetFiltersBtn">Reset Filters</button>
+                    </div>
+                `;
+
+                document.getElementById('resetFiltersBtn').addEventListener('click', function () {
+                    clearFiltersBtn.click();
+                });
+
+                return;
+            }
+
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</span>
+                        <h3>${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-footer">
+                            <span class="product-price">$${product.price.toFixed(2)}</span>
+                            <button class="btn-add-to-cart" 
+                                data-id="${product.id}" 
+                                data-name="${product.name}" 
+                                data-price="${product.price}" 
+                                data-image="${product.image}">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                productsGrid.appendChild(productCard);
+            });
+
+            // Add event listeners to new add-to-cart buttons
+            document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+                button.addEventListener('click', function () {
+                    const product = {
+                        id: this.dataset.id,
+                        name: this.dataset.name,
+                        price: parseFloat(this.dataset.price),
+                        image: this.dataset.image,
+                        quantity: 1
+                    };
+
+                    addToCart(product);
+                    showSuccessMessage(`${product.name} added to cart!`);
+                });
+            });
+        }
+
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('ibd_cart')) || [];
+            const existingItem = cart.find(item => item.id === product.id);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem('ibd_cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('ibd_cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.querySelectorAll('.cart-count').forEach(el => {
+                el.textContent = totalItems;
+            });
+        }
+
+        function showSuccessMessage(message) {
+            const toast = document.createElement('div');
+            toast.className = 'success-toast';
+            toast.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            `;
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
