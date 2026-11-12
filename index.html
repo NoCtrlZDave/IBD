@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f3f6" />
+    <script>
+      (function () {
+        try {
+          localStorage.removeItem('ibd-theme');
+        } catch (e) {
+          /* storage unavailable */
+        }
+        document.documentElement.setAttribute('data-theme', 'light');
+      })();
+    </script>
+    <meta
+      name="description"
+      content="IBD — Inspired by Dennis. Premium streetwear essentials redefining street culture through contemporary design and authentic style."
+    />
+    <meta property="og:title" content="IBD — Inspired by Dennis" />
+    <meta
+      property="og:description"
+      content="Premium streetwear essentials. Spring/Summer 2026 collection now live."
+    />
+    <meta property="og:type" content="website" />
+    <title>IBD — Inspired by Dennis | Premium Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
