@@ -167,9 +167,6 @@ function Header() {
                                         `nav-link${isActive ? ' is-active' : ''}`
                                     }
                                 >
-                                    <span className="nav-link-index" aria-hidden="true">
-                                        {String(index + 1).padStart(2, '0')}
-                                    </span>
                                     <span>{link.label}</span>
                                     <LuArrowUpRight
                                         className="nav-link-arrow"
